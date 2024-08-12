@@ -1,11 +1,13 @@
-<img style="width:300px;margin:.5rem" src="https://kubernetes.io/_common-resources/images/flower.svg" />
+<p align="center" width="100%">
+<img style="width:33%;" src="https://kubernetes.io/_common-resources/images/flower.svg" />
+</p>
 
 ## Deply telegraf as a daemonset into your kubernetes cluster
 - Select the context you want to deploy the telegraf daemonset into:
   - kubectl config get-contexts
   - kubectl config use-context $context-name
 - Add your Hosted Graphite API Key to the telegraf/config.yaml file:
-  - prefix = "$YOUR-HG-API-KEY.telegraf"
+  - prefix = "API-KEY.telegraf"
 - Deploy the kustomization.yaml manifest:
   - kubectl apply -k . --dry-run=client
   - kubectl apply -k .
