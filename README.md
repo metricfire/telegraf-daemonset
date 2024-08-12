@@ -1,4 +1,4 @@
-<div style="text-align:center;">
+<div style="text-align: center;">
 <img style="width:300px;" src="https://kubernetes.io/_common-resources/images/flower.svg" />
 </div>
 
