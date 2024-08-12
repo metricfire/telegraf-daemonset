@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: telegraf-config
+data:
+  telegraf.conf: |
+    [agent]
+      hostname = "$HOSTNAME"
+      interval = "10s"
+      round_interval = true
+
+    [[inputs.cpu]]
+      percpu = false  ## set to 'false' to limit the number of cpu metrics returned
+
+    [[inputs.disk]]
+      ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+
+    # [[inputs.diskio]]  ## commented out to limit the number of metrics returned
+
+    [[inputs.mem]]
+
+    [[inputs.system]]
+
+    [[outputs.graphite]]
+      servers = ["carbon.hostedgraphite.com:2003"]
+      prefix = "<YOUR-HG-API-KEY>.telegraf"
+
+    [[inputs.kubernetes]]
+      url = "https://$HOSTIP:10250"
+      bearer_token = "/var/run/secrets/kubernetes.io/serviceaccount/token"
+      insecure_skip_verify = true
