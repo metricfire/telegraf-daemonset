@@ -1,4 +1,6 @@
-<img style="width:300px;margin:auto;" src="https://kubernetes.io/_common-resources/images/flower.svg" />
+<div style="text-align:center;">
+<img style="width:300px;" src="https://kubernetes.io/_common-resources/images/flower.svg" />
+</div>
 
 ## Deply telegraf as a daemonset into your kubernetes cluster
 - Select the context you want to deploy the telegraf daemonset into
