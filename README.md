@@ -7,7 +7,7 @@
   - kubectl config get-contexts
   - kubectl config use-context $context-name
 - Add your Hosted Graphite API Key to the telegraf/config.yaml file:
-  - prefix = "API-KEY.telegraf"
+  - prefix = "$API-KEY.telegraf"
 - Deploy the kustomization.yaml manifest:
   - kubectl apply -k . --dry-run=client
   - kubectl apply -k .
@@ -23,3 +23,5 @@ daemonset.apps/telegraf created
 
 - Confirm the daemonset is running in your context, with the name *telegraf* and the namespace *monitoring*:
   - kubectl get daemonsets --all-namespaces
+- Instantly visualize your metrics:
+  - Import the 'k8 Overview' dashboard into your HG account from our Dashboard Library
