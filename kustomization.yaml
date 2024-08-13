@@ -4,9 +4,9 @@ kind: Kustomization
 namespace: monitoring
 
 resources:
-  - telegraf/config.yaml
-  - telegraf/daemonset.yaml
-  - telegraf/namespace.yaml
-  - telegraf/role-binding.yaml
-  - telegraf/role.yaml
-  - telegraf/service_account.yaml
+  - resources/config.yaml
+  - resources/daemonset.yaml
+  - resources/namespace.yaml
+  - resources/role-binding.yaml
+  - resources/role.yaml
+  - resources/service_account.yaml
