@@ -23,7 +23,7 @@ data:
 
     [[outputs.graphite]]
       servers = ["carbon.hostedgraphite.com:2003"]
-      prefix = "<YOUR-HG-API-KEY>.telegraf"
+      prefix = "<YOUR-HG-API-KEY>.telegraf-k8"
 
     [[inputs.kubernetes]]
       url = "https://$HOSTIP:10250"
