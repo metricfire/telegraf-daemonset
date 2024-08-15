@@ -15,7 +15,8 @@ data:
     [[inputs.disk]]
       ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
 
-    # [[inputs.diskio]]  ## commented out to limit the number of metrics returned
+    [[inputs.diskio]]  ## using the fieldinclude method for metric filtering
+      fieldinclude = ["reads", "writes"]
 
     [[inputs.mem]]
 
